@@ -7,15 +7,21 @@ using P = pair<int, int>;
 
 int main()
 {
-    int h, w;
-    cin >> h >> w;
-    vector<string> s(h);
+    int n;
+    cin >> n;
+    vector<int> a(n);
+    int m = 0;
     int ans = 0;
-    rep(i, h)
+    rep(i, n)
     {
-        cin >> s[i];
-        rep(j, w) if (s[i][j] == '#') ans++;
+        cin >> a[i];
+        m = max(m, a[i]);
+    }
+    rep(i, n)
+    {
+        if (a[i] == m)
+            a[i] -= m;
+        ans = max(a[i], ans);
     }
     cout << ans << endl;
-    return 0;
 }

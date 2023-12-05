@@ -7,15 +7,11 @@ using P = pair<int, int>;
 
 int main()
 {
-    int h, w;
-    cin >> h >> w;
-    vector<string> s(h);
-    int ans = 0;
-    rep(i, h)
+    string s;
+    cin >> s;
+    int n = s.length();
+    rep(i, n)
     {
-        cin >> s[i];
-        rep(j, w) if (s[i][j] == '#') ans++;
+        cout << s[i] << " ";
     }
-    cout << ans << endl;
-    return 0;
 }

@@ -8,19 +8,16 @@ using P = pair<int, int>;
 int main()
 {
     int n;
-    cin >> n;
-    string s(n + 1, '-');
-    for (int j = 9; j >= 1; j--)
+    string s;
+    cin >> n >> s;
+    for (int i = 0; i < (n - 2); i++)
     {
-        if (n % j != 0)
-            continue;
-        for (int i = 0; i <= n; i += n / j)
+        if (s[i] == 'A' && s[i + 1] == 'B' && s[i + 2] == 'C')
         {
-            s[i] = '0' + j;
+            cout << i + 1 << endl;
+            return 0;
         }
     }
-
-    cout << s << endl;
-
+    cout << -1 << endl;
     return 0;
 }

@@ -7,22 +7,28 @@ using P = pair<int, int>;
 
 int main()
 {
-    map<string, int> mp;
-    mp.insert(make_pair("tourist", 3858));
-    mp.insert(make_pair("ksun48", 3679));
-    mp.insert(make_pair("Benq", 3658));
-    mp.insert(make_pair("Um_nik", 3648));
-    mp.insert(make_pair("apiad", 3638));
-    mp.insert(make_pair("Stonefeang", 3630));
-    mp.insert(make_pair("ecnerwala", 3613));
-    mp.insert(make_pair("mnbvmar", 3555));
-    mp.insert(make_pair("newbiedmy", 3516));
-    mp.insert(make_pair("semiexp", 3481));
-
     string s;
     cin >> s;
-    int value = mp.at(s);
-    cout << value << endl;
+    if (s == "tourist")
+        cout << 3858 << endl;
+    if (s == "ksun48")
+        cout << 3679 << endl;
+    if (s == "Benq")
+        cout << 3658 << endl;
+    if (s == "Um_nik")
+        cout << 3648 << endl;
+    if (s == "apiad")
+        cout << 3638 << endl;
+    if (s == "Stonefeang")
+        cout << 3630 << endl;
+    if (s == "ecnerwala")
+        cout << 3613 << endl;
+    if (s == "mnbvmar")
+        cout << 3555 << endl;
+    if (s == "newbiedmy")
+        cout << 3516 << endl;
+    if (s == "semiexp")
+        cout << 3481 << endl;
 
     return 0;
 }

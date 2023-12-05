@@ -7,15 +7,15 @@ using P = pair<int, int>;
 
 int main()
 {
-    int h, w;
-    cin >> h >> w;
-    vector<string> s(h);
-    int ans = 0;
-    rep(i, h)
+    int n, x;
+    cin >> n >> x;
+    vector<int> s(n);
+    int count = 0;
+    rep(i, n)
     {
         cin >> s[i];
-        rep(j, w) if (s[i][j] == '#') ans++;
+        if (s[i] <= x)
+            count += s[i];
     }
-    cout << ans << endl;
-    return 0;
+    cout << count << endl;
 }
